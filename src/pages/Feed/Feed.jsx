@@ -92,7 +92,7 @@ export default function Feed() {
               <div className="flex-1">
                 <p className="font-semibold text-sm text-gray-800 dark:text-gray-200">{userName}</p>
                 <div className="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400 mt-0.5">
-                  <Globe size={12} /><span>Public</span><span>▾</span>
+                  <Globe size={12} /><span className="hidden sm:inline">Public</span><span>▾</span>
                 </div>
               </div>
             </div>
@@ -107,12 +107,12 @@ export default function Feed() {
               <div className="flex items-center gap-4">
                 <button onClick={() => fileRef.current.click()}
                   className="flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition">
-                  <ImageIcon size={18} className="text-green-500" /> Photo/video
+                  <ImageIcon size={18} className="text-green-500" /> <span className="hidden sm:inline">Photo/video</span>
                 </button>
                 <button className="flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-400 hover:text-yellow-500 dark:hover:text-yellow-400 transition">
-                  <Smile size={18} className="text-yellow-500" /> Feeling/activity
+                  <Smile size={18} className="text-yellow-500" /> <span className="hidden sm:inline">Feeling/activity</span>
                 </button>
-                {image && <span className="text-xs text-green-600 dark:text-green-400 flex items-center gap-1"><Check size={14} /> {image.name}</span>}
+                {image && <span className="text-xs text-green-600 dark:text-green-400 flex items-center gap-1"><Check size={14} /> <span className="hidden sm:inline">{image.name}</span></span>}
                 <input ref={fileRef} type="file" accept="image/*" className="hidden"
                   onChange={e => setImage(e.target.files[0])} />
               </div>

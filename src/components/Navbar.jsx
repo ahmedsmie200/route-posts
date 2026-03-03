@@ -42,18 +42,18 @@ export default function Navbar() {
             style={{ background: "#0f172a" }}>
             A-BOOK
           </div>
-          <span className="font-bold text-gray-800 dark:text-white text-lg">A-book</span>
+          <span className="font-bold text-gray-800 dark:text-white text-lg hidden sm:block">A-book</span>
         </Link>
 
         <div className="flex items-center gap-1">
           <Link to="/feed" className={linkClass("/feed")}>
-            <Home size={18} /> <span>Feed</span>
+            <Home size={18} /> <span className="hidden sm:inline">Feed</span>
           </Link>
           <Link to="/profile" className={linkClass("/profile")}>
-            <User size={18} /> <span>Profile</span>
+            <User size={18} /> <span className="hidden sm:inline">Profile</span>
           </Link>
           <Link to="/notifications" className={linkClass("/notifications")}>
-            <Bell size={18} /> <span>Notifications</span>
+            <Bell size={18} /> <span className="hidden sm:inline">Notifications</span>
           </Link>
         </div>
 

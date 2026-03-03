@@ -44,11 +44,10 @@ export default function Login() {
           boxShadow: "0 0 30px rgba(59, 130, 246, 0.4)",
         }}
       >
-        <div className="w-full md:w-[60%] p-12 flex flex-col justify-center relative z-10 bg-white dark:bg-[#0f172a] text-gray-900 dark:text-white transition-colors"
-          style={{ clipPath: "polygon(0 0, 100% 0, 80% 100%, 0 100%)" }}>
-          <h2 className="text-4xl font-bold mb-10 tracking-wide text-center md:text-left pr-20">Login</h2>
+        <div className="w-full md:w-[60%] p-6 md:p-12 flex flex-col justify-center relative z-10 bg-white dark:bg-[#0f172a] text-gray-900 dark:text-white transition-colors md:[clip-path:polygon(0_0,100%_0,80%_100%,0_100%)]">
+          <h2 className="text-4xl font-bold mb-10 tracking-wide text-center md:text-left pr-0 md:pr-20">Login</h2>
 
-          <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6 pr-20">
+          <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6 pr-0 md:pr-20">
             <div className="relative group">
               <input
                 {...register("email")}
@@ -78,7 +77,7 @@ export default function Login() {
             <button
               type="submit"
               disabled={loading}
-              className="mt-6 w-1/2 py-2.5 rounded-full font-bold text-white shadow-lg transition-transform hover:scale-105 active:scale-95 disabled:opacity-60 flex justify-center items-center gap-2 mx-auto md:mx-0"
+              className="mt-6 w-full md:w-1/2 py-2.5 rounded-full font-bold text-white shadow-lg transition-transform hover:scale-105 active:scale-95 disabled:opacity-60 flex justify-center items-center gap-2 mx-auto md:mx-0"
               style={{ background: "linear-gradient(90deg, #2563eb, #3b82f6)" }}
             >
               {loading ? "Logging in..." : "Login"}

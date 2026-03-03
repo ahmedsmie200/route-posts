@@ -57,7 +57,7 @@ export default function Register() {
           }}
         >
           <div className="md:pr-20">
-            <h1 className="text-5xl font-black mb-4 tracking-wider leading-tight">WELCOME<br />TO A-BOOK!</h1>
+            <h1 className="text-3xl md:text-5xl font-black mb-4 tracking-wider leading-tight">WELCOME<br />TO A-BOOK!</h1>
             <p className="text-lg opacity-90 mb-10 font-light">
               Connect with friends and the world around you on A-book.
             </p>
@@ -80,10 +80,9 @@ export default function Register() {
           </div>
         </div>
 
-        <div className="w-full md:w-[60%] p-8 md:p-12 flex flex-col justify-center relative z-10 bg-white dark:bg-[#0f172a] text-gray-900 dark:text-white ml-auto transition-colors"
-          style={{ clipPath: "polygon(20% 0, 100% 0, 100% 100%, 0 100%)" }}>
+        <div className="w-full md:w-[60%] p-8 md:p-12 flex flex-col justify-center relative z-10 bg-white dark:bg-[#0f172a] text-gray-900 dark:text-white ml-auto transition-colors md:[clip-path:polygon(20%_0,100%_0,100%_100%,0_100%)]">
           <div className="md:pl-20">
-            <h2 className="text-4xl font-bold mb-8 tracking-wide text-center md:text-left">Sign Up</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 tracking-wide text-center md:text-left">Sign Up</h2>
 
             <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -164,7 +163,7 @@ export default function Register() {
               <button
                 type="submit"
                 disabled={loading}
-                className="mt-8 w-1/2 py-2.5 rounded-full font-bold text-white shadow-lg transition-transform hover:scale-105 active:scale-95 disabled:opacity-60 flex justify-center items-center gap-2 mx-auto md:mx-0"
+                className="mt-8 w-full md:w-1/2 py-2.5 rounded-full font-bold text-white shadow-lg transition-transform hover:scale-105 active:scale-95 disabled:opacity-60 flex justify-center items-center gap-2 mx-auto md:mx-0"
                 style={{ background: "linear-gradient(90deg, #2563eb, #3b82f6)" }}
               >
                 {loading ? "Signing up..." : "Sign Up"}
@@ -182,7 +181,7 @@ export default function Register() {
   );
 }
 
-export function Tabs({ active }) {
+export function Tabs() {
   return null;
 }
 export function LeftPanel() {

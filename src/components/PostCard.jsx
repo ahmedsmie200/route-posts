@@ -108,13 +108,13 @@ export default function PostCard({ post, onUpdate }) {
         <button onClick={handleLike} disabled={loadingLike}
           className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-medium transition
             ${isLiked ? "bg-blue-50 text-blue-600 dark:bg-blue-900/40 dark:text-blue-400" : "text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700"}`}>
-          <ThumbsUp size={18} className={isLiked ? "fill-current" : ""} /> Like
+          <ThumbsUp size={18} className={isLiked ? "fill-current" : ""} /> <span className="hidden sm:inline">Like</span>
         </button>
         <button className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition">
-          <MessageSquare size={18} /> Comment
+          <MessageSquare size={18} /> <span className="hidden sm:inline">Comment</span>
         </button>
         <button className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition">
-          <Repeat size={18} /> Share
+          <Repeat size={18} /> <span className="hidden sm:inline">Share</span>
         </button>
       </div>
     </div>
